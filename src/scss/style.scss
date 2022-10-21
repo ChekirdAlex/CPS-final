@@ -71,7 +71,7 @@ ul {
 /*ITEMS*/
 
 .nav-bar__round-menu {
-    background: url("../icons/menu.png") center center no-repeat;
+    background: url("../img/menu.png") center center no-repeat;
 }
 
 .nav-bar__logo {
@@ -81,23 +81,23 @@ ul {
 }
 
 .nav-bar__round-call {
-    background: url("../icons/call.png") center center no-repeat;
+    background: url("../img/call.png") center center no-repeat;
 }
 
 .nav-bar__round-message {
-    background: url("../icons/message.png") center center no-repeat;
+    background: url("../img/message.png") center center no-repeat;
 }
 
 .nav-bar__round-contacts {
-    background: url("../icons/contacts.png") center center no-repeat;
+    background: url("../img/contacts.png") center center no-repeat;
 }
 
 .nav-bar__round-request {
-    background: url("../icons/request.png") center center no-repeat;
+    background: url("../img/request.png") center center no-repeat;
 }
 
 .nav-bar__round-repair-status {
-    background: url("../icons/repair-status.png") center center no-repeat;
+    background: url("../img/repair-status.png") center center no-repeat;
 }
 
 .nav-bar__logo::after {
@@ -235,7 +235,7 @@ ul {
     content: "";
     width: 8px;
     height: 11px;
-    background: #B8FFEC url("../icons/arrow-down.png") no-repeat;
+    background: #B8FFEC url("../img/arrow-down.png") no-repeat;
     left: 8px;
     top: 5px;
 }

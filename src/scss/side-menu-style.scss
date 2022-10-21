@@ -8,6 +8,26 @@ html{
     font-family: 'TT Lakes', sans-serif;
 }
 
+.side-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  top: 0;
+  z-index: 2;
+  transition: all 2s;
+}
+
+.side-menu--hidden {
+  transform: translatex(-100%);
+}
+
+.side-menu--visible {
+  display: flex;
+  transform: translatex(0);
+}
+
+
 .side-container {
     margin-right: auto;
     width: 320px;
@@ -60,27 +80,27 @@ html{
 /*ITEMS*/
 
 .side-header__round-close {
-    background: #FF3E79 url("../icons/close.png") center center no-repeat;
+    background: #FF3E79 url("../img/close.png") center center no-repeat;
     margin-right: 16px;
 }
 
 .side-header__round-search {
-    background: #FF3E79 url("../icons/search.png") center center no-repeat;
+    background: #FF3E79 url("../img/search.png") center center no-repeat;
     margin-left: 78px;
 }
 
-.side-menu {
+.side-body {
     height: 656px;
 }
 
-.side-menu__list {
+.side-body__list {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     height: 388px;
 }
 
-.side-menu__link {
+.side-body__link {
     display: block;
     height: 24px;
     font-weight: 400;
@@ -89,7 +109,7 @@ html{
     letter-spacing: -0.2px;
 }
 
-.side-menu__link::before {
+.side-body__link::before {
     content: "";
     display: block;
     position: absolute;
@@ -100,10 +120,10 @@ html{
     transition: all 0.3s;
 }
 
-.side-menu__link:hover {
+.side-body__link:hover {
     position: relative;
 }
-.side-menu__link:hover::before {
+.side-body__link:hover::before {
     content: "";
     transform: translate(-24px, -5px);
     height: 32px;
@@ -120,15 +140,15 @@ html{
 /*ITEMS*/
 
 .side-footer__round-call {
-    background: #FF3E79 url("../icons/call.png") center center no-repeat;
+    background: #FF3E79 url("../img/call.png") center center no-repeat;
 }
 
 .side-footer__round-message {
-    background: #FF3E79 url("../icons/message.png") center center no-repeat;
+    background: #FF3E79 url("../img/message.png") center center no-repeat;
 }
 
 .side-footer__round-contacts {
-    background: #FF3E79 url("../icons/contacts.png") center center no-repeat;
+    background: #FF3E79 url("../img/contacts.png") center center no-repeat;
 }
 
 .side-footer__contacts {

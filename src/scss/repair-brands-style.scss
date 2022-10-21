@@ -216,7 +216,7 @@ html{
         display: block;
         width: 120px;
         height: 24px;
-        background: url("../icons/arrow-down.png") no-repeat left 50%;
+        background: url("../img/arrow-down.png") no-repeat left 50%;
         font-weight: 500;
         font-size: 16px;
         line-height: 24px;
@@ -228,7 +228,7 @@ html{
     }
 
     .show-more--clicked {
-        background: url("../icons/arrow-up.png") no-repeat left 50%;
+        background: url("../img/arrow-up.png") no-repeat left 50%;
         width: 80px;
     }
     /*.show-more::before {*/
