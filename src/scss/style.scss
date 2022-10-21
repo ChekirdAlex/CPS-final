@@ -172,6 +172,7 @@ ul {
     letter-spacing: -0.2px;
     color: #7E7E82;
     font-weight: 400;
+    border: 2px solid transparent;
 }
 
 /*LINKS STATUS*/
@@ -196,7 +197,7 @@ ul {
 .content {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 0;
+    margin-top: 24px;
     position: relative;
 }
 
@@ -205,19 +206,19 @@ ul {
 }
 
 .text__container {
-    height: 90px;
+    height: 98px;
     overflow: hidden;
 }
 
 .text__paragraph {
     font-weight: 300;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 20px;
     letter-spacing: 0.2px;
 }
 
-/*Не подключается шрифт*/
 .text__btn {
+  font-family: 'TT Lakes', sans-serif;
     margin-top: 16px;
     position: relative;
     width: 132px;

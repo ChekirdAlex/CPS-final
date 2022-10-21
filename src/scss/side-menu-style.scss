@@ -9,22 +9,21 @@ html{
 }
 
 .side-menu {
-  display: none;
+  display: flex;
   flex-direction: column;
   position: absolute;
   background-color: white;
   top: 0;
   z-index: 2;
-  transition: all 2s;
+  transition: all 1s;
 }
 
 .side-menu--hidden {
-  transform: translatex(-100%);
+  transform: translateX(-100%);
 }
 
 .side-menu--visible {
-  display: flex;
-  transform: translatex(0);
+  transform: translateX(0);
 }
 
 

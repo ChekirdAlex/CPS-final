@@ -1,3 +1,5 @@
+import Swiper, { Pagination } from 'swiper';
+
 const slider = document.querySelector('.swiper');
 let init = false;
 let sliderBrands;
@@ -7,6 +9,7 @@ function createSliderBrands () {
         if (!init) {
             init = true;
             sliderBrands = new Swiper(slider, {
+              modules: [ Pagination ],
                 slidesPerView: 'auto',
                 spaceBetween: 16,
                 pagination: {
