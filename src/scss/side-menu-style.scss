@@ -1,31 +1,23 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html{
-    font-family: 'TT Lakes', sans-serif;
-}
-
 .side-menu {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  background-color: white;
-  top: 0;
-  z-index: 2;
-  transition: all 1s;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    z-index: 2;
+    transition: all 1s;
 }
 
 .side-menu--hidden {
-  transform: translateX(-100%);
+    transition: all 1s;
+    transform: translateX(-100%);
 }
 
 .side-menu--visible {
-  transform: translateX(0);
+    transition: all 1s;
+    transform: translateX(0);
 }
-
 
 .side-container {
     margin-right: auto;
@@ -56,20 +48,11 @@ html{
     margin-top: 19px;
 }
 
-.round {
+.side-button {
     width: 40px;
     height: 40px;
     background-color: #FF3E79;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.side-header__round {
-    width: 40px;
-    height: 40px;
-    background-color: #FF3E79;
+    border: #FF3E79;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -78,18 +61,18 @@ html{
 
 /*ITEMS*/
 
-.side-header__round-close {
+.side-header__button-close {
     background: #FF3E79 url("../img/close.png") center center no-repeat;
     margin-right: 16px;
 }
 
-.side-header__round-search {
+.side-header__button-search {
     background: #FF3E79 url("../img/search.png") center center no-repeat;
     margin-left: 78px;
 }
 
 .side-body {
-    height: 656px;
+    //height: 656px;
 }
 
 .side-body__list {
@@ -129,6 +112,8 @@ html{
 }
 
 .side-footer {
+    margin-top: auto;
+    //margin-bottom: 32px;
     height: 220px;
 }
 
@@ -138,15 +123,15 @@ html{
 
 /*ITEMS*/
 
-.side-footer__round-call {
+.side-footer__button-call {
     background: #FF3E79 url("../img/call.png") center center no-repeat;
 }
 
-.side-footer__round-message {
+.side-footer__button-message {
     background: #FF3E79 url("../img/message.png") center center no-repeat;
 }
 
-.side-footer__round-contacts {
+.side-footer__button-contacts {
     background: #FF3E79 url("../img/contacts.png") center center no-repeat;
 }
 
@@ -186,4 +171,22 @@ html{
     font-weight: 400;
     letter-spacing: -0.2px;
     margin-right: 7px;
+}
+
+@media screen and (min-width: 1440px) {
+    //.side-menu {
+    //    height: 100%;
+    //}
+
+    .side-menu--desktop--visible {
+        transform: translateX(0);
+    }
+
+    .side-header__button-close {
+        display: none;
+    }
+
+    .side-header__button-search {
+        margin-left: 119px;
+    }
 }
