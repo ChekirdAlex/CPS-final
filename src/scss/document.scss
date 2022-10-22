@@ -33,6 +33,9 @@ ul {
 
 /*DESKTOP VERSION*/
 @media screen and (min-width: 1440px){
+    html{
+        font-family: 'TT Lakes', sans-serif;
+    }
     .body {
         background: #F8F8F8;
         max-width: 1440px;

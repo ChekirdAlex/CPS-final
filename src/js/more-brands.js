@@ -1,4 +1,4 @@
-const showMoreButton = document.querySelector('.show-more');
+const showMoreButton = document.querySelector('.show-more-btn');
 // const buttonIconFirst = showMoreButton.querySelector('.show-more::before');
 // const buttonIconSecond = showMoreButton.querySelector('.show-more::after');
 const swiper = document.querySelector('.swiper'); //Visibility of brands list

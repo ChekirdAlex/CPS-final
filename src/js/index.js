@@ -1,5 +1,5 @@
 // Scripts
-import '../js/swiper';
+import './swiper';
 import '../js/more-brands';
 import  '../js/side-menu';
 

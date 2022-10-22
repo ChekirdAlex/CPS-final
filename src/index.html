@@ -80,57 +80,57 @@
             </div>
         </div>
         </footer>
-        </aside>
-        <main>
-            <header class="header">
-                <div class="container">
-                    <nav class="nav-bar">
-                        <ul class="list nav-bar__list">
-                            <li class="nav-bar__item nav-bar__menu nav-bar__item--desktop--hidden">
-                                <button class='nab-bar__button nav-bar__button-menu'></button>
-                            </li>
-                            <li class="nav-bar__item nav-bar__logo nav-bar__item--desktop--hidden">
-                                <a href="#" class="nav-bar__link">
-                                    <img src="img/logo.png" alt="Логотип" class="nav-bar__icon">
-                                </a>
-                            </li>
-                            <li class="nav-bar__item nav-bar__call nav-bar--tablet--visible">
-                                <button class='nab-bar__button nav-bar__button-call'></button>
-                            </li>
-                            <li class="nav-bar__item nav-bar__message nav-bar--tablet--visible">
-                                <button class='nab-bar__button nav-bar__button-message'></button>
-                            </li>
-                            <li class="nav-bar__item nav-bar__contacts nav-bar--tablet--visible">
-                                <button class='nab-bar__button nav-bar__button-contacts'></button>
-                            </li>
-                            <li class="nav-bar__item nav-bar__request">
-                                <a href="#" class="nav-bar__link">
-                                    <div class="nav-bar-description nav-bar__description--hidden">Оставить заявку</div>
-                                    <button class='nab-bar__button nav-bar__button-request'></button>
-                                </a>
-                            </li>
+    </aside>
+    <main>
+        <header class="header">
+            <div class="container">
+                <nav class="nav-bar">
+                    <ul class="list nav-bar__list">
+                        <li class="nav-bar__item nav-bar__menu nav-bar__item--desktop--hidden">
+                            <button class='nab-bar__button nav-bar__button-menu'></button>
+                        </li>
+                        <li class="nav-bar__item nav-bar__logo nav-bar__item--desktop--hidden">
+                            <a href="#" class="nav-bar__link">
+                                <img src="img/logo.png" alt="Логотип" class="nav-bar__icon">
+                            </a>
+                        </li>
+                        <li class="nav-bar__item nav-bar__call nav-bar--tablet--visible">
+                            <button class='nab-bar__button nav-bar__button-call'></button>
+                        </li>
+                        <li class="nav-bar__item nav-bar__message nav-bar--tablet--visible">
+                            <button class='nab-bar__button nav-bar__button-message'></button>
+                        </li>
+                        <li class="nav-bar__item nav-bar__contacts nav-bar--tablet--visible">
+                            <button class='nab-bar__button nav-bar__button-contacts'></button>
+                        </li>
+                        <li class="nav-bar__item nav-bar__request">
+                            <a href="#" class="nav-bar__link">
+                                <div class="nav-bar-description nav-bar__description--hidden">Оставить заявку</div>
+                                <button class='nab-bar__button nav-bar__button-request'></button>
+                            </a>
+                        </li>
 <!--                    <li class="nav-bar__item nav-bar__request">-->
 <!--                        <a href="#" class="nav-bar__link">-->
 <!--                            <div class="nav-bar-description nav-bar__description&#45;&#45;hidden">Оставить заявку</div>-->
 <!--                            <div class="nav-bar__round nav-bar__round-request"></div>-->
 <!--                        </a>-->
 <!--                    </li>-->
-                        <li class="nav-bar__item nav-bar__repair-status">
-                            <a href="#" class="nav-bar__link">
-                                <div class="nav-bar-description nav-bar__description--hidden">Статус ремонта</div>
-                                <button class='nab-bar__button nav-bar__button-repair-status'></button>
-                            </a>
-                        </li>
+                    <li class="nav-bar__item nav-bar__repair-status">
+                        <a href="#" class="nav-bar__link">
+                            <div class="nav-bar-description nav-bar__description--hidden">Статус ремонта</div>
+                            <button class='nab-bar__button nav-bar__button-repair-status'></button>
+                        </a>
+                    </li>
 <!--                    <li class="nav-bar__item nav-bar__repair-status">-->
 <!--                        <a href="#" class="nav-bar__link">-->
 <!--                            <div class="nav-bar-description nav-bar__description&#45;&#45;hidden">Статус ремонта</div>-->
 <!--                            <div class="nav-bar__round nav-bar__round-repair-status"></div>-->
 <!--                        </a>-->
 <!--                    </li>-->
-                        </ul>
-                    </nav>
-                </div>
-            </header>
+                    </ul>
+                </nav>
+            </div>
+        </header>
         <section class='preview'>
         <div class="container">
             <section class="top">
@@ -177,7 +177,7 @@
             </header>
             <div class="repair-main">
                 <div class="repair-container repair-container--overflow--hidden">
-                    <div class="swiper swiper--overflow--hidden">
+                    <div class="swiper swiper__brands swiper--overflow--hidden">
                         <!-- Additional required wrapper -->
                         <ul class="swiper-wrapper">
                             <!-- Slides -->
@@ -240,10 +240,40 @@
                         <!-- If we need pagination -->
                         <div class="swiper-pagination"></div>
                     </div>
-                    <button class="show-more">Показать все</button>
+                    <button class='show-more-btn'>Показать все</button>
                 </div>
             </div>
         </section>
+
+<!-----------------------------------------ДО-ПОСЛЕ--------------------------------------------------->
+
+        <section class='repair-techs'>
+            <h2 class='slider-title repair-techs__title'>Ремонт различных видов техники</h2>
+            <div class='container repair-techs__container'>
+                <div class="swiper swiper--overflow--hidden repair-techs__body">
+                    <!-- Additional required wrapper -->
+                    <ul class="swiper-wrapper repair-techs__list">
+                        <!-- Slides -->
+                        <li class="swiper-slide repair-techs__item">
+                            <button class='repair-techs__btn'>Ремонт ноутбуков</button>
+                        </li>
+                        <li class="swiper-slide repair-techs__item">
+                            <button class='repair-techs__btn'>Ремонт планшетов</button>
+                        </li>
+                        <li class="swiper-slide repair-techs__item">
+                            <button class='repair-techs__btn'>Ремонт ПК</button>
+                        </li>
+                        <li class="swiper-slide repair-techs__item">
+                            <button class='repair-techs__btn'>Ремонт ПК</button>
+                        </li>
+                    </ul>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+                <button class='show-more-btn'>Показать все</button>
+            </div>
+        </section>
     </main>
+
 </body>
 </html>
