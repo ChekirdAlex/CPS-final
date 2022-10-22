@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 html{
     font-family: 'TT Lakes', sans-serif;
     background-color: #F2F2F2;
@@ -31,6 +37,8 @@ html{
 .swiper {
     margin: 16px 0 0 16px;
     height: 100px;
+    //width: 105%;
+    //transform: translateX(-5%);
 }
 
 .swiper-wrapper {
@@ -260,9 +268,11 @@ html{
 }
 
 /*DESKTOP VERSION*/
-@media screen and (min-width: 1120px){
+@media screen and (min-width: 1440px){
     .repair-container {
         /*min-width: 1120px;*/
+        width: 1090px;
+        transform: translateX(300px);
     }
 
     .repair-container--overflow--hidden {
