@@ -106,22 +106,22 @@
 @media screen and (min-width: 1440px){
     .repair-techs {
         width: 1120px;
+        transform: translateX(320px);
     }
 
     .repair-techs__container {
         width: 1120px;
         padding: 0;
+        transform: translateX(0);
+        margin: 24px 0 0 0;
+
     }
 
     .repair-techs__title {
-        transform: translateX(320px);
+        transform: translateX(0);
     }
 
-    .repair-techs__container {
-        margin: 24px 0 0 0;
-    }
-
-    .swiper-wrapper {
+    .repair-techs__list {
         row-gap: 16px;
     }
 
