@@ -10,7 +10,6 @@
     top: 0;
     right: 0;
     z-index: 2;
-    //transition: all 1s;
 }
 
 .feedback-request__button-close {
@@ -79,9 +78,11 @@
     color: #FF3E79;
 }
 
-.feedback-request__button {
+.feedback-request__button-message,
+.feedback-request__button-call {
     margin-top: 19px;
-    margin-left: 152px;
+    margin-right: 16px;
+    float: right;
 }
 
 @media screen and (min-width: 1440px) {
@@ -108,7 +109,8 @@
         width: 376px;
     }
 
-    .feedback-request__button {
-        margin-left: 250px;
+    .feedback-request__button-message,
+    .feedback-request__button-call {
+        margin-right: 32px;
     }
 }

@@ -1,5 +1,7 @@
 // Scripts
-import './swiper';
+import './swiperBrands';
+import './swiperTechs';
+import './swiperPrice';
 import '../js/more-brands';
 import  '../js/side-menu';
 

@@ -1,14 +1,16 @@
 import Swiper, { Pagination } from 'swiper';
 
+const techs = document.querySelector('.repair-techs');
+const slider = techs.querySelector('.swiper');
 let init = false;
-let sliderBrands;
+let sliderTechs;
 
-function createSliderBrands () {
+function createSliderTechs () {
     if (window.innerWidth < 768) {
         if (!init) {
             init = true;
-            sliderBrands = new Swiper('.swiper', {
-              modules: [ Pagination ],
+            sliderTechs = new Swiper(slider, {
+                modules: [ Pagination ],
                 slidesPerView: 'auto',
                 spaceBetween: 16,
                 pagination: {
@@ -19,10 +21,10 @@ function createSliderBrands () {
             });
         }
     } else if (init) {
-        sliderBrands.destroy();
+        sliderTechs.destroy();
         init = false;
     }
 }
 
-createSliderBrands();
-window.addEventListener('resize', createSliderBrands);
+createSliderTechs();
+window.addEventListener('resize', createSliderTechs);
