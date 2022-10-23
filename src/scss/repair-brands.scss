@@ -1,47 +1,45 @@
-.repair-techs {
+.repair-brands {
     background-color: #F2F2F2;
-    height: 308px;
+    height: 220px;
     transition: transform 1s;
 }
 
-.repair-techs__body {
-    margin-top: 16px;
-    height: 190px;
+.repair-brands__container {
+    margin: 16px 0 0 16px;
+    height: 100px;
 }
 
-.repair-techs__list {
+.repair-brands__list {
     list-style: none;
     width: 240px;
 }
 
-.repair-techs__button {
-    width: 240px;
-    height: 160px;
-    display: flex;
-    position: relative;
-    padding: 16px 0 0 16px;
-    background: #FFFFFF;
-    border: 1px solid #EAEAEA;
-    border-radius: 6px;
-    font-family: 'TT Lakes', sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    color: #1B1C21;
+.repair-brands__item:last-child {
+    margin-right: 16px;
 }
 
-.repair-techs__button::before {
+.repair-brands__button {
+    position: relative;
+    width: 240px;
+    height: 72px;
+    background-color: #FFFFFF;
+    border: 2px solid #EAEAEA;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.repair-brands__button::before {
     content: '';
     position: absolute;
     width: 40px;
     height: 40px;
     border: 2px solid #FF3E79;
     border-radius: 50%;
-    bottom: 16px;
+    top: 13px;
     right: 16px;
 }
 
-.repair-techs__button::after {
+.repair-brands__button::after {
     content: '';
     position: absolute;
     width: 9px;
@@ -49,41 +47,80 @@
     border-right: 2px solid #FF3E79;
     border-bottom: 2px solid #FF3E79;
     transform: rotate(-45deg);
-    bottom: 33px;
+    top: 30px;
     right: 34px;
 }
 
-.repair-techs__button:focus {
+.repair-brands__button:focus {
     border: 2px solid #B8FFEC;
     border-radius: 6px;
 }
 
-.repair-techs__button:hover {
+.repair-brands__button:hover {
     border: 2px solid #B8FFEC;
     border-radius: 6px;
+}
+
+.repair-brands__icon {
+    position: absolute;
+    left: 16px;
+    top: 0;
+}
+
+//Brands
+.repair-brands__lenovo {
+    top: 21px;
+}
+
+.repair-brands__samsung {
+    top: 18px;
+}
+
+.repair-brands__apple {
+    top: 12px;
+}
+
+.repair-brands__viewSonic {
+    top: 25px;
+}
+
+.repair-brands__bosch {
+    top: 22px;
+}
+
+.repair-brands__hp {
+    top: 10px;
+}
+
+.repair-brands__acer {
+    top: 25px;
+}
+
+.repair-brands__sony {
+    top: 23px;
 }
 
 //TABLET VERSION
 @media screen and (min-width: 768px) {
-    .repair-techs {
+    .repair-brands {
         height: max-content;
         padding-bottom: 32px;
     }
 
-    .repair-techs__container {
-        width: 100vw;
-        padding: 0;
+    .repair-brands__container {
+        margin: 16px 0 0 0;
+        transition: height 1s;
     }
 
-    .repair-techs--overflow--hidden {
+    .repair-brands--overflow--hidden {
         height: 160px;
     }
 
-    .repair-techs--overflow--visible {
+    .repair-brands--overflow--visible {
         height: max-content;
     }
 
-    .repair-techs__list {
+    .repair-brands__list {
         display: flex;
         justify-content: space-around;
         list-style: none;
@@ -93,31 +130,23 @@
         row-gap: 16px;
     }
 
-    .repair-techs__item {
+    .repair-brands__item {
         width: 224px;
-        height: 160px;
+        height: 72px;
     }
-    .repair-techs__button {
+    .repair-brands__button {
         width: 224px;
     }
 }
 
 //DESKTOP VERSION
 @media screen and (min-width: 1440px){
-    .repair-techs {
+    .repair-brands {
         width: 1120px;
-    }
-
-    .repair-techs__container {
-        width: 1120px;
-        padding: 0;
-    }
-
-    .repair-techs__title {
         transform: translateX(320px);
     }
 
-    .repair-techs__container {
+    .repair-brands__container {
         margin: 24px 0 0 0;
     }
 
@@ -125,10 +154,10 @@
         row-gap: 16px;
     }
 
-    .repair-techs__item {
+    .repair-brands__item {
         width: 240px;
     }
-    .repair-techs__button {
+    .repair-brands__button {
         width: 240px;
     }
 }

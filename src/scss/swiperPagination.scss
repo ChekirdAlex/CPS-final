@@ -1,0 +1,16 @@
+.swiper-pagination {
+    transform: translate(-5px, 15px);
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #B5B6BC;
+}
+
+//TABLET VERSION
+@media screen and (min-width: 768px) {
+    .swiper-pagination {
+        display: none;
+    }
+}
