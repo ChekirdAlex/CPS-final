@@ -8,6 +8,7 @@
     <title>CPS</title>
 </head>
 <body class="body">
+<!---------------------------SIDE-MENU---------------------------------------------->
     <aside class='side-menu side-menu--hidden side-menu--desktop--visible'>
         <header class="side-header">
             <div class="side-container">
@@ -81,6 +82,7 @@
         </div>
         </footer>
     </aside>
+<!-------------------------------MAIN-CONTENT-------------------------------------------------------->
     <main>
         <header class="header">
             <div class="container">
@@ -348,7 +350,55 @@
                 </div>
             </div>
         </section>
-
     </main>
+
+<!-------------------------------------------------Модальные окна--------------------------------------------------------->
+    <aside class='feedback-request feedback-request--message--hidden'>
+        <header class='feedback-request__header'>
+            <button class='feedback-request__button-close'></button>
+        </header>
+        <section class='feedback-request__body'>
+            <h2 class='feedback-request__title'>Обратная связь</h2>
+            <form action='#' method='post' class='feedback-request__form'>
+                <label for='user-name'>
+                    <input type='text' id='user-name' class='feedback-request__input' placeholder="Имя" value='' required>
+                </label>
+                <br>
+                <label for='user-phone'>
+                    <input type='tel' id='user-phone' class='feedback-request__input' placeholder="Телефон" value='' pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                </label>
+                <br>
+                <label for='user-email'>
+                    <input type='email' id='user-email' class='feedback-request__input' placeholder="Электронная почта" value='' required>
+                </label>
+                <br>
+                <label>
+                    <textarea class='feedback-request__input message-request__text' placeholder="Сообщение" name="request" cols="5" rows="5"></textarea>
+                </label>
+                <p class='feedback-request__agreement'>
+                    Нажимая “отправить”, вы даете <a href='#' class='feedback-request__link'>согласие на обработку персональных данных</a> и соглашаетесь с нашей <a href='#' class='feedback-request__link'>политикой конфиденциальности</a>
+                </p>
+                <button type='submit' class='button-submit feedback-request__button-message'>ОТПРАВИТЬ</button>
+            </form>
+        </section>
+    </aside>
+
+    <aside class='feedback-request call-request--hidden'>
+        <header class='feedback-request__header'>
+            <button class='feedback-request__button-close'></button>
+        </header>
+        <section class='feedback-request__body'>
+            <h2 class='feedback-request__title'>Обратная связь</h2>
+            <form action='#' method='post' class='feedback-request__form'>
+                <label for='callback-phone'>
+                    <input type='tel' id='callback-phone' class='feedback-request__input' placeholder="Телефон" value='' pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                </label>
+                <p class='feedback-request__agreement'>
+                    Нажимая “отправить”, вы даете <a href='#' class='feedback-request__link'>согласие на обработку персональных данных</a> и соглашаетесь с нашей <a href='#' class='feedback-request__link'>политикой конфиденциальности</a>
+                </p>
+                <button type='submit' class='button-submit feedback-request__button-call'>ОТПРАВИТЬ</button>
+            </form>
+        </section>
+    </aside>
 </body>
 </html>

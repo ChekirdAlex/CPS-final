@@ -1,0 +1,10 @@
+.feedback-request--call--hidden {
+    transition: all 1s;
+    transform: translateX(100%);
+    display: none;
+}
+
+.feedback-request--call--visible {
+    transition: all 1s;
+    transform: translateX(0);
+}
