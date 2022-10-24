@@ -1,0 +1,150 @@
+@import "variables";
+
+.repair-techs {
+    background-color: $color-bg;
+    height: 308px;
+    transition: transform 1s;
+
+    @media screen and (min-width: 768px) {
+        height: max-content;
+        padding-bottom: 32px;
+    }
+
+    @media screen and (min-width: 1440px){
+        width: 1120px;
+        transform: translateX(320px);
+    }
+
+    &__body {
+        margin-top: 16px;
+        height: 190px;
+    }
+
+    &__list {
+        list-style: none;
+        width: 240px;
+
+        @media screen and (min-width: 768px) {
+
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            flex-wrap: wrap;
+            width: 100%;
+            height: auto;
+            row-gap: 16px;
+
+            &::after {
+                content: "";
+                width: 224px;
+                height: 72px;
+                background-color: transparent;
+            }
+        }
+
+        @media screen and (min-width: 1440px){
+            row-gap: 16px;
+        }
+
+    }
+
+    &__button {
+        width: 240px;
+        height: 160px;
+        display: flex;
+        position: relative;
+        padding: 16px 0 0 16px;
+        background: $color-white;
+        border: 1px solid $color-divider;
+        border-radius: 6px;
+        font-family: 'TT Lakes', sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $color-black;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 2px solid $color-pink;
+            border-radius: 50%;
+            bottom: 16px;
+            right: 16px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 9px;
+            height: 9px;
+            border-right: 2px solid $color-pink;
+            border-bottom: 2px solid $color-pink;
+            transform: rotate(-45deg);
+            bottom: 33px;
+            right: 34px;
+        }
+
+        &:focus {
+            border: 2px solid $color-marine-light;
+            border-radius: 6px;
+        }
+
+        &:hover {
+            border: 2px solid $color-marine-light;
+            border-radius: 6px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        &--overflow--hidden {
+            height: 160px;
+        }
+
+        &--overflow--visible {
+            height: max-content;
+        }
+    }
+
+    &__container {
+        @media screen and (min-width: 768px) {
+            width: 100vw;
+            padding: 0;
+        }
+
+        @media screen and (min-width: 1440px){
+            width: 1120px;
+            padding: 0;
+            transform: translateX(0);
+            margin: 24px 0 0 0;
+        }
+    }
+
+    .repair-techs__item {
+        @media screen and (min-width: 768px) {
+            width: 224px;
+            height: 160px;
+        }
+
+        @media screen and (min-width: 1440px){
+            width: 240px;
+        }
+    }
+
+    .repair-techs__button {
+        @media screen and (min-width: 768px) {
+            width: 224px;
+        }
+
+        @media screen and (min-width: 1440px){
+            width: 240px;
+        }
+    }
+
+    .repair-techs__title {
+        @media screen and (min-width: 1440px){
+            transform: translateX(0);
+        }
+    }
+}

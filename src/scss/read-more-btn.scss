@@ -1,0 +1,23 @@
+@import "variables";
+
+.read-more-btn {
+    display: block;
+    width: 120px;
+    height: 24px;
+    background: url("../img/arrow-down.png") no-repeat left 50%;
+    font-family: 'TT Lakes', sans-serif;
+    font-weight: 500;
+    margin-left: 5px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: $color-black;
+    text-align: right;
+    border: none;
+    cursor: pointer;
+}
+
+.read-more--clicked {
+    background: url("../img/arrow-up.png") no-repeat left 50%;
+    width: 80px;
+}

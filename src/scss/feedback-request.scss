@@ -1,0 +1,135 @@
+@import "variables";
+
+.feedback-request {
+    height: 100vh;
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    padding-top: 24px;
+    padding-left: 16px;
+    background-color: $color-white;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    //transition: all 1s;
+
+    @media screen and (min-width: 1440px) {
+        width: 440px;
+        padding-left: 32px;
+    }
+}
+
+.feedback-request {
+
+    &__button-close {
+        background: $color-pink url("../img/close.png") center center no-repeat;
+        margin-right: 16px;
+
+        @media screen and (min-width: 1440px) {
+            position: absolute;
+            left: -96px;
+        }
+    }
+
+    &__body {
+        margin-top: 32px;
+
+        @media screen and (min-width: 1440px) {
+            margin-top: 0;
+        }
+    }
+
+    &__title {
+        display: flex;
+        font-size: 28px;
+        color: $color-black;
+        font-weight: 700;
+
+        &::before {
+            display: inline-block;
+            position: absolute;
+            content: "";
+            width: 4px;
+            height: 40px;
+            background: $color-marine;
+            left: 0;
+        }
+    }
+
+    &__form {
+        margin: 24px auto;
+    }
+
+    &__input {
+        //width: 288px;
+        width: 90%;
+        max-width: 376px;
+        height: 48px;
+        border: 1px solid $color-divider;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        padding: 12px 16px;
+
+        @media screen and (min-width: 1440px) {
+            width: 376px;
+        }
+    }
+
+    &__text {
+        height: 188px;
+        width: 90%;
+        max-width: 376px;
+    }
+
+    &__agreement {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+        color: #7E7E82;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-pink;
+    }
+
+    &__button {
+        margin-top: 19px;
+        margin-right: 32px;
+        float: right;
+
+        @media screen and (min-width: 1440px) {
+            margin-left: 250px;
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        &__header {
+            height: 0;
+            position: relative;
+        }
+    }
+
+    &--call--hidden {
+        transition: 1s;
+        transform: translateX(100%);
+        display: none;
+    }
+
+    &--call--visible {
+        transition: 1s;
+        transform: translateX(0);
+    }
+
+    &--message--hidden {
+        transition: 1s;
+        transform: translateX(100%);
+        display: none;
+    }
+
+    &--message--visible {
+        transition: 1s;
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,30 @@
+@import "variables";
+
+.button-submit {
+    position: relative;
+    width: 136px;
+    height: 32px;
+    background: $color-pink;
+    border: $color-pink;
+    border-radius: 16px;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: left;
+    padding-left: 21px;
+    font-weight: 700;
+    letter-spacing: -0.15px;
+    text-transform: uppercase;
+    color: $color-white;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-right: 2px solid $color-white;
+        border-bottom: 2px solid $color-white;
+        transform: rotate(-45deg);
+        top: 12px;
+        right: 18px;
+    }
+}
