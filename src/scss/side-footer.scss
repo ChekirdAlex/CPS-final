@@ -1,0 +1,63 @@
+@import "variables";
+
+.side-footer {
+    margin-top: auto;
+    //margin-bottom: 32px;
+    height: 220px;
+
+    &__item {
+        margin-right: 16px;
+    }
+
+    /*ITEMS*/
+
+    &__button-call {
+        background: $color-pink url("../img/call.png") center center no-repeat;
+    }
+
+    &__button-message {
+        background: $color-pink url("../img/message.png") center center no-repeat;
+    }
+
+    &__button-contacts {
+        background: $color-pink url("../img/contacts.png") center center no-repeat;
+    }
+
+    &__contacts {
+        margin-top: 16px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+    }
+
+    &__email {
+        display: block;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        letter-spacing: -0.2px;
+    }
+
+    &__phone {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+        letter-spacing: -0.6px;
+    }
+
+    &__lang {
+        margin-top: 40px;
+        display: flex;
+    }
+
+    &_ru,
+    &__en,
+    &__ch {
+        display: block;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        letter-spacing: -0.2px;
+        margin-right: 7px;
+    }
+}

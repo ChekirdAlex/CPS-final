@@ -1,163 +1,174 @@
+@import "variables";
+
 .repair-brands {
-    background-color: #F2F2F2;
+    background-color: $color-bg;
     height: 220px;
     transition: transform 1s;
-}
 
-.repair-brands__container {
-    margin: 16px 0 0 16px;
-    height: 100px;
-}
-
-.repair-brands__list {
-    list-style: none;
-    width: 240px;
-}
-
-.repair-brands__item:last-child {
-    margin-right: 16px;
-}
-
-.repair-brands__button {
-    position: relative;
-    width: 240px;
-    height: 72px;
-    background-color: #FFFFFF;
-    border: 2px solid #EAEAEA;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.repair-brands__button::before {
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border: 2px solid #FF3E79;
-    border-radius: 50%;
-    top: 13px;
-    right: 16px;
-}
-
-.repair-brands__button::after {
-    content: '';
-    position: absolute;
-    width: 9px;
-    height: 9px;
-    border-right: 2px solid #FF3E79;
-    border-bottom: 2px solid #FF3E79;
-    transform: rotate(-45deg);
-    top: 30px;
-    right: 34px;
-}
-
-.repair-brands__button:focus {
-    border: 2px solid #B8FFEC;
-    border-radius: 6px;
-}
-
-.repair-brands__button:hover {
-    border: 2px solid #B8FFEC;
-    border-radius: 6px;
-}
-
-.repair-brands__icon {
-    position: absolute;
-    left: 16px;
-    top: 0;
-}
-
-//Brands
-.repair-brands__lenovo {
-    top: 21px;
-}
-
-.repair-brands__samsung {
-    top: 18px;
-}
-
-.repair-brands__apple {
-    top: 12px;
-}
-
-.repair-brands__viewSonic {
-    top: 25px;
-}
-
-.repair-brands__bosch {
-    top: 22px;
-}
-
-.repair-brands__hp {
-    top: 10px;
-}
-
-.repair-brands__acer {
-    top: 25px;
-}
-
-.repair-brands__sony {
-    top: 23px;
-}
-
-//TABLET VERSION
-@media screen and (min-width: 768px) {
-    .repair-brands {
+    @media screen and (min-width: 768px) {
         height: max-content;
         padding-bottom: 32px;
     }
 
-    .repair-brands__container {
-        margin: 16px 0 0 0;
-        transition: height 1s;
-    }
-
-    .repair-brands--overflow--hidden {
-        height: 160px;
-    }
-
-    .repair-brands--overflow--visible {
-        height: max-content;
-    }
-
-    .repair-brands__list {
-        display: flex;
-        justify-content: space-around;
-        list-style: none;
-        flex-wrap: wrap;
-        width: 100%;
-        height: auto;
-        row-gap: 16px;
-    }
-
-    .repair-brands__item {
-        width: 224px;
-        height: 72px;
-    }
-    .repair-brands__button {
-        width: 224px;
-    }
-}
-
-//DESKTOP VERSION
-@media screen and (min-width: 1440px){
-    .repair-brands {
+    @media screen and (min-width: 1440px){
         width: 1120px;
         transform: translateX(320px);
     }
+}
 
-    .repair-brands__container {
-        margin: 24px 0 0 0;
+.repair-brands {
+    &__container {
+        margin: 16px 0 0 16px;
+        height: 100px;
+        padding-right: 16px;
     }
 
-    .repair-brands__list {
-        row-gap: 16px;
-    }
-
-    .repair-brands__item {
+    &__list {
+        list-style: none;
         width: 240px;
     }
-    .repair-brands__button {
+
+    &__item:last-child {
+        margin-right: 9px;
+    }
+
+    &__button {
+        position: relative;
         width: 240px;
+        height: 72px;
+        background-color: $color-white;
+        border: 2px solid $color-divider;
+        border-radius: 6px;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 2px solid $color-pink;
+            border-radius: 50%;
+            top: 13px;
+            right: 16px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 9px;
+            height: 9px;
+            border-right: 2px solid $color-pink;
+            border-bottom: 2px solid $color-pink;
+            transform: rotate(-45deg);
+            top: 30px;
+            right: 34px;
+        }
+
+        &:focus {
+            border: 2px solid $color-marine-light;
+            border-radius: 6px;
+        }
+
+        &:hover {
+            border: 2px solid $color-marine-light;
+            border-radius: 6px;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        left: 16px;
+        top: 0;
+    }
+
+    //Brands
+    &__lenovo {
+        top: 21px;
+    }
+
+    &__samsung {
+        top: 18px;
+    }
+
+    &__apple {
+        top: 12px;
+    }
+
+    &__viewSonic {
+        top: 25px;
+    }
+
+    &__bosch {
+        top: 22px;
+    }
+
+    &__hp {
+        top: 10px;
+    }
+
+    &__acer {
+        top: 25px;
+    }
+
+    &__sony {
+        top: 23px;
+    }
+
+    @media screen and (min-width: 768px) {
+        &__container {
+            margin: 16px 0 0 16px;
+            transition: height 1s;
+
+            @media screen and (min-width: 1440px){
+                margin: 24px 0 0 24px;
+            }
+        }
+
+        &--overflow--hidden {
+            height: 160px;
+        }
+
+        &--overflow--visible {
+            height: max-content;
+        }
+
+        &__list {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            width: 100%;
+            height: auto;
+            row-gap: 16px;
+            column-gap: 24px;
+            justify-content: space-between;
+
+            @media screen and (min-width: 1440px){
+                row-gap: 16px;
+            }
+
+            &::after {
+                content: "";
+                width: 224px;
+                height: 72px;
+                background-color: transparent;
+            }
+        }
+
+        &__item {
+            width: 224px;
+            height: 72px;
+
+            @media screen and (min-width: 1440px){
+                width: 240px;
+            }
+        }
+
+        &__button {
+            width: 224px;
+
+            @media screen and (min-width: 1440px){
+                width: 240px;
+            }
+        }
     }
 }

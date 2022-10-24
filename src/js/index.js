@@ -2,8 +2,10 @@
 import './swiperBrands';
 import './swiperTechs';
 import './swiperPrice';
-import '../js/more-brands';
-import  '../js/side-menu';
+import './read-more';
+import './more-brands';
+import './side-menu';
+import './feedback-request';
 
 // Styles
 import 'swiper/swiper.scss';

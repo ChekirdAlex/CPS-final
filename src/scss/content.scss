@@ -1,0 +1,16 @@
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    position: relative;
+
+    @media screen and (min-width: 768px) {
+        margin-top: 32px;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    @media screen and (min-width: 1440px){
+        margin-top: 7px;
+    }
+}

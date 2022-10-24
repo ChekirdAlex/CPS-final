@@ -1,9 +1,11 @@
+@import "variables";
+
 .button-submit {
     position: relative;
     width: 136px;
     height: 32px;
-    background: #FF3E79;
-    border: #FF3E79;
+    background: $color-pink;
+    border: $color-pink;
     border-radius: 16px;
     font-size: 12px;
     line-height: 24px;
@@ -12,17 +14,17 @@
     font-weight: 700;
     letter-spacing: -0.15px;
     text-transform: uppercase;
-    color: #FFFFFF;
-}
+    color: $color-white;
 
-.button-submit::after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    border-right: 2px solid #FFFFFF;
-    border-bottom: 2px solid #FFFFFF;
-    transform: rotate(-45deg);
-    top: 12px;
-    right: 18px;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-right: 2px solid $color-white;
+        border-bottom: 2px solid $color-white;
+        transform: rotate(-45deg);
+        top: 12px;
+        right: 18px;
+    }
 }

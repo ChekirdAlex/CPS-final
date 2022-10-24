@@ -1,0 +1,11 @@
+@import "variables";
+
+.body {
+    display: flex;
+
+    @media screen and (min-width: 1440px){
+        background: $color-gray-light;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,21 @@
+@import "variables";
+
+.services-title {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $color-gray;
+    background: linear-gradient(270deg, $color-gray-light 0%, $color-white 98.61%);
+    padding: 15px 0 16px 16px;
+    border-top: 1px solid #D9FFF5;
+
+    @media screen and (min-width: 768px) {
+        padding: 15px 0 16px 24px;
+    }
+
+    @media screen and (min-width: 1440px) {
+        padding: 15px 0 16px 32px;
+    }
+}
