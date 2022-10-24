@@ -61,7 +61,7 @@ callCloseBtn.addEventListener("click", function (a) {
 document.addEventListener("click", function (a) {
     const target = a.target;
     const its_call= target == callRequest || callRequest.contains(target);
-    const its_message= target == callRequest || callRequest.contains(target);
+    const its_message= target == messageRequest || messageRequest.contains(target);
     const call_is_active = callRequest.classList.contains("feedback-request--call--visible");
     const message_is_active = messageRequest.classList.contains("feedback-request--message--visible");
 
