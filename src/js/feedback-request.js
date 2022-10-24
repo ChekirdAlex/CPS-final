@@ -7,6 +7,9 @@ const callCloseBtn = callRequest.querySelector('.feedback-request__button-close'
 const mainRequest = document.querySelector('.main');
 const sideMenuRequest = document.querySelector('.side-menu');
 
+const messageSubmit = messageRequest.querySelector('.button-submit');
+const callSubmit = callRequest.querySelector('.button-submit');
+
 const sideMessageBtn = document.querySelector('.side-footer__button-message');
 const sideCallBtn = document.querySelector('.side-footer__button-call');
 
@@ -81,3 +84,13 @@ document.addEventListener("click", function (a) {
         sideMenuRequest.classList.remove('side-menu--blurred');
     }
 });
+
+
+messageSubmit.addEventListener('click', function(evt) {
+    evt.preventDefault();
+})
+
+
+callSubmit.addEventListener('click', function(evt) {
+    evt.preventDefault();
+})
