@@ -25,13 +25,17 @@
     }
 
     &__rights {
-        text-align: left;
+        @media screen and (min-width: 768px) {
+            text-align: left;
+        }
     }
 
     &__info {
-        max-width: 330px;
-        text-align: right;
-        float: right;
+        @media screen and (min-width: 768px) {
+            max-width: 330px;
+            text-align: right;
+            float: right;
+        }
     }
 
     @media screen and (min-width: 1440px) {
