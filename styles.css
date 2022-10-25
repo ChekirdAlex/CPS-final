@@ -705,6 +705,23 @@ template {
     -ms-overflow-style: none;
     scrollbar-width: none; }
 
+.blur-screen {
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  transition: 1s;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 2; }
+
+.blur-screen--visible {
+  display: block; }
+
+.main--blurred {
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  transition: 1s; }
+
 .content {
   display: flex;
   flex-wrap: wrap;
@@ -758,7 +775,7 @@ template {
 
 .side-container {
   margin-right: auto;
-  width: 100vw;
+  width: 320px;
   padding: 0 24px; }
   @media screen and (min-width: 768px) {
     .side-container {
@@ -766,7 +783,7 @@ template {
 
 .side-header {
   height: 116px;
-  width: 100vw; }
+  width: 320px; }
   @media screen and (min-width: 768px) {
     .side-header {
       width: 320px; } }
@@ -984,7 +1001,7 @@ ul {
     align-self: center; }
     @media screen and (min-width: 768px) {
       .nav-bar__logo::after {
-        content: none; } }
+        display: none; } }
     @media screen and (min-width: 768px) {
       .nav-bar__logo {
         margin-left: 0;
@@ -1012,7 +1029,7 @@ ul {
       display: list-item; } }
   @media screen and (min-width: 768px) {
     .nav-bar__item {
-      margin-left: auto; }
+      margin-left: 0; }
     .nav-bar__menu, .nav-bar__call, .nav-bar__message, .nav-bar__request, .nav-bar__contacts, .nav-bar__request, .nav-bar__repair-status {
       margin-left: 0; }
     .nav-bar__menu, .nav-bar__request {
@@ -1153,7 +1170,7 @@ ul {
   flex-direction: column;
   background-color: #FFFFFF;
   top: 0;
-  z-index: 2;
+  z-index: 3;
   transition: all 1s;
   max-height: 1024px;
   position: fixed; }
@@ -1171,6 +1188,11 @@ ul {
     -webkit-filter: blur(4px);
             filter: blur(4px);
     transition: 1s; }
+
+.main--blurred {
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  transition: 1s; }
 
 @media screen and (min-width: 768px) {
   .main--blurred {
@@ -1349,7 +1371,7 @@ ul {
   font-weight: 300;
   text-transform: uppercase;
   color: #7E7E82;
-  background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+  background: linear-gradient(90deg, #F8F8F8 1.39%, #FFFFFF 100%);
   padding: 15px 0 16px 16px;
   border-top: 1px solid #D9FFF5; }
   @media screen and (min-width: 768px) {
@@ -1548,12 +1570,15 @@ ul {
         border-radius: 6px; } }
   .price__item--mobile--hidden {
     display: none; }
+    @media screen and (min-width: 768px) {
+      .price__item--mobile--hidden {
+        display: list-item; } }
   .price__box {
     width: 260px;
     height: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     position: relative;
     padding: 16px;
     background: #FFFFFF;
@@ -1574,13 +1599,25 @@ ul {
         .price__box::after {
           position: absolute;
           content: '';
-          width: 688px;
+          width: 95.55%;
           height: 1px;
           background: #EAEAEA;
           bottom: 0; }
           .price__box::after:last-child {
             content: none; } }
-  .price .price__text {
+  @media screen and (min-width: 768px) {
+    .price__headers {
+      background: #F8F8F8;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      color: #7E7E82;
+      mix-blend-mode: normal;
+      opacity: 0.72;
+      align-items: end; } }
+  .price__headers-button {
+    visibility: hidden; }
+  .price__text {
     position: relative;
     top: 15px;
     font-size: 14px;
@@ -1589,7 +1626,7 @@ ul {
     color: #1B1C21;
     font-weight: 300; }
     @media screen and (min-width: 768px) {
-      .price .price__text {
+      .price__text {
         position: static; } }
   .price__position::before {
     content: 'Ремонтные услуги';
@@ -1621,6 +1658,18 @@ ul {
     color: #7E7E82;
     mix-blend-mode: normal;
     opacity: 0.72; }
+  @media screen and (min-width: 768px) {
+    .price__position::before, .price__money::before, .price__time::before {
+      content: none; } }
+  @media screen and (min-width: 768px) {
+    .price__position {
+      flex-basis: 350px; } }
+  @media screen and (min-width: 768px) {
+    .price__money {
+      flex-basis: 74px; } }
+  @media screen and (min-width: 768px) {
+    .price__time {
+      flex-basis: 81px; } }
   .price__button {
     width: 119px;
     height: 32px;
@@ -1663,6 +1712,12 @@ ul {
     @media screen and (min-width: 768px) {
       .price__text-request {
         width: 421px; } }
+    @media screen and (min-width: 1440px) {
+      .price__text-request {
+        width: 1056px;
+        margin: 24px 0 0 24px;
+        padding: 0;
+        transform: translateX(0); } }
   .price__link {
     position: relative;
     font-size: 16px;
@@ -1683,45 +1738,13 @@ ul {
       right: -15px; }
   @media screen and (min-width: 768px) {
     .price__container {
-      height: 360px; }
-    .price__item--mobile--hidden {
-      display: list-item; }
-    .price__headers {
-      background: #F8F8F8;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 16px;
-      color: #7E7E82;
-      mix-blend-mode: normal;
-      opacity: 0.72;
-      align-items: end; }
-    .price__content, .price__position, .price__money, .price__time {
-      margin-right: auto; }
-    .price__headers-money {
-      position: relative;
-      left: 70px; }
-    .price__position {
-      margin-right: 20px;
-      width: 340px;
-      white-space: nowrap; }
-    .price__position::before, .price__money::before, .price__time::before {
-      content: none; } }
+      height: 360px; } }
   @media screen and (min-width: 1440px) {
     .price__container {
-      width: 1056px;
-      margin: 24px 0 0 24px;
-      padding: 0;
-      transform: translateX(0); }
+      transform: translateX(0); } }
+  @media screen and (min-width: 1440px) {
     .price__title {
-      transform: translateX(320px); }
-    .price__headers-money {
-      left: -20px; }
-    .price__headers-time {
-      position: relative;
-      left: -60px; }
-    .price-time {
-      position: relative;
-      left: -60px; } }
+      transform: translateX(320px); } }
 
 .button-submit {
   position: relative;
@@ -1760,7 +1783,9 @@ ul {
   background-color: #FFFFFF;
   top: 0;
   right: 0;
-  z-index: 2; }
+  z-index: 3;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+  border-left: 1px solid #D9FFF5; }
   @media screen and (min-width: 1440px) {
     .feedback-request {
       width: 440px;
