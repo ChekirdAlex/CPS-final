@@ -11,6 +11,3 @@ import './feedback-request';
 import 'swiper/swiper.scss';
 import 'swiper/modules/pagination/pagination.scss';
 import '../scss/index.scss';
-
-
-console.log('Works!');

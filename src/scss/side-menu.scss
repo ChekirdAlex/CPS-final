@@ -32,6 +32,11 @@
     }
 }
 
+.main--blurred {
+    filter: blur(4px);
+    transition: 1s;
+}
+
 @media screen and (min-width: 768px) {
 
     .main--blurred {

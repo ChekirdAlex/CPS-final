@@ -1,8 +1,5 @@
-const repairBrands = document.querySelector('.repair-brands');
-const repairTechs = document.querySelector('.repair-techs');
-
-const showMoreBrands = repairBrands.querySelector('.show-more-btn');
-const showMoreTechs = repairTechs.querySelector('.show-more-btn');
+const showMoreBrands = document.querySelector('.repair-brands .show-more-btn');
+const showMoreTechs = document.querySelector('.repair-techs .show-more-btn');
 
 const brandsList = document.querySelector('.repair-brands__container'); //Visibility of brands list
 const techsList = document.querySelector('.repair-techs__body'); //Visibility of techs list

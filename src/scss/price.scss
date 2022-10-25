@@ -39,6 +39,10 @@
 
     &__item--mobile--hidden {
         display: none;
+
+        @media screen and (min-width: 768px) {
+            display: list-item;
+        }
     }
 
     &__box {
@@ -46,7 +50,7 @@
         height: 200px;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         position: relative;
         padding: 16px;
         background: $color-white;
@@ -61,14 +65,16 @@
         @media screen and (min-width: 768px) {
             position: relative;
             flex-direction: row;
+            //justify-content: left;
             width: 100%;
             height: 56px;
             border: none;
 
+            //Divider
             &::after {
                 position: absolute;
                 content: '';
-                width: 688px;
+                width: 95.55%;
                 height: 1px;
                 background: #EAEAEA;
                 bottom: 0;
@@ -80,7 +86,25 @@
         }
     }
 
-    .price__text {
+    &__headers {
+
+        @media screen and (min-width: 768px) {
+            background: $color-gray-light;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16px;
+            color: $color-gray;
+            mix-blend-mode: normal;
+            opacity: 0.72;
+            align-items: end;
+        }
+
+        &-button {
+            visibility: hidden;
+        }
+    }
+
+    &__text {
         position: relative;
         top: 15px;
         font-size: 14px;
@@ -130,6 +154,32 @@
         opacity: 0.72;
     }
 
+    &__position::before,
+    &__money::before,
+    &__time::before {
+        @media screen and (min-width: 768px) {
+            content: none;
+        }
+    }
+
+    &__position {
+        @media screen and (min-width: 768px) {
+            flex-basis: 350px;
+        }
+    }
+
+    &__money {
+        @media screen and (min-width: 768px) {
+            flex-basis: 74px;
+        }
+    }
+
+    &__time {
+        @media screen and (min-width: 768px) {
+            flex-basis: 81px;
+        }
+    }
+
     &__button {
         width: 119px;
         height: 32px;
@@ -150,6 +200,7 @@
 
         @media screen and (min-width: 768px) {
             position: relative;
+            //position: absolute;
             bottom: 0;
             right: 0;
         }
@@ -178,6 +229,13 @@
         @media screen and (min-width: 768px) {
             width: 421px;
         }
+
+        @media screen and (min-width: 1440px) {
+            width: 1056px;
+            margin: 24px 0 0 24px;
+            padding: 0;
+            transform: translateX(0);
+        }
     }
 
     &__link {
@@ -201,77 +259,18 @@
             right: -15px;
         }
     }
-
-    @media screen and (min-width: 768px) {
-
-        &__container {
+    &__container {
+        @media screen and (min-width: 768px) {
             height: 360px;
         }
-
-        &__item--mobile--hidden {
-            display: list-item;
-        }
-
-        &__headers {
-            background: $color-gray-light;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 16px;
-            color: $color-gray;
-            mix-blend-mode: normal;
-            opacity: 0.72;
-            align-items: end;
-        }
-
-        &__content,
-        &__position,
-        &__money,
-        &__time {
-            margin-right: auto;
-        }
-
-        &__headers-money {
-            position: relative;
-            left: 70px;
-        }
-
-        &__position {
-            margin-right: 20px;
-            width: 340px;
-            white-space: nowrap;
-        }
-
-        &__position::before,
-        &__money::before,
-        &__time::before {
-            content: none;
+        @media screen and (min-width: 1440px) {
+            transform: translateX(0);
         }
     }
 
-    @media screen and (min-width: 1440px) {
-        &__container {
-            width: 1056px;
-            margin: 24px 0 0 24px;
-            padding: 0;
-            transform: translateX(0);
-        }
-
-        &__title {
+    &__title {
+        @media screen and (min-width: 1440px) {
             transform: translateX(320px);
-        }
-
-        &__headers-money {
-            left: -20px;
-        }
-
-        &__headers-time {
-            position: relative;
-            left: -60px;
-        }
-
-        &-time {
-            position: relative;
-            left: -60px;
         }
     }
 }
