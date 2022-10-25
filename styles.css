@@ -1169,10 +1169,13 @@ ul {
   flex-direction: column;
   background-color: #FFFFFF;
   top: 0;
-  z-index: 2;
+  z-index: 5;
   transition: all 1s;
   max-height: 1024px;
   position: fixed; }
+  @media screen and (min-width: 1440px) {
+    .side-menu {
+      z-index: 2; } }
   .side-menu--hidden {
     transition: 1s;
     transform: translateX(-100%); }
