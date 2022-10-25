@@ -31,7 +31,6 @@
         text-decoration: none;
     }
 
-
     &-description {
         display: block;
         width: 128px;
@@ -61,7 +60,7 @@
 
         @media screen and (min-width: 768px) {
             &::after {
-                content: none;
+                display: none;
             }
         }
 
@@ -109,7 +108,7 @@
 
     @media screen and (min-width: 768px) {
         &__item {
-            margin-left: auto;
+            margin-left: 0;
         }
 
         &__menu,

@@ -1,0 +1,14 @@
+.blur-screen {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    //filter: blur(50px);
+    transition: 1s;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 2;
+
+}
+.blur-screen--visible {
+    display: block;
+}
