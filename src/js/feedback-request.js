@@ -6,6 +6,8 @@ const messageCloseBtn = messageRequest.querySelector('.feedback-request__button-
 const callCloseBtn = callRequest.querySelector('.feedback-request__button-close');
 const blurScreen = document.querySelector('.blur-screen');
 
+const sideMenu = document.querySelector('.side-menu');
+
 
 const sideMessageBtn = document.querySelector('.side-footer__button-message');
 const sideCallBtn = document.querySelector('.side-footer__button-call');
@@ -15,6 +17,9 @@ sideCallBtn.addEventListener("click", function (evt) {
     callRequest.classList.remove('feedback-request--call--hidden');
     callRequest.classList.add('feedback-request--call--visible');
     blurScreen.classList.add('blur-screen--visible');
+
+    sideMenu.classList.remove('side-menu--visible');
+    sideMenu.classList.add('side-menu--hidden');
 });
 
 sideMessageBtn.addEventListener("click", function (evt) {
@@ -22,6 +27,9 @@ sideMessageBtn.addEventListener("click", function (evt) {
     messageRequest.classList.remove('feedback-request--message--hidden');
     messageRequest.classList.add('feedback-request--message--visible');
     blurScreen.classList.add('blur-screen--visible');
+
+    sideMenu.classList.remove('side-menu--visible');
+    sideMenu.classList.add('side-menu--hidden');
 });
 
 callBtn.addEventListener("click", function (evt) {
